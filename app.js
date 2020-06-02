@@ -98,7 +98,7 @@ client.on("message", message => {
     }
     */
 
-    if (message.content.indexOf(client.config.prefix) !== 0)
+    if (message.content.toLowerCase().indexOf(client.config.prefix) !== 0)
         return;
 
     var args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);

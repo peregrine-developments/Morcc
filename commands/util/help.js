@@ -48,7 +48,7 @@ exports.run = (client, message, args) => {
                     text: "© 2018 AbsurdBrd Development"
                 }
             }
-        }).then(message.react("✅"))
+        }).then(message.react("✅"));
         //    .then(() => { if (message.channel.type == "text") message.delete([timeout = 5000]); });
     } else {
         let found = false;
@@ -69,9 +69,10 @@ exports.run = (client, message, args) => {
         }
 
         if (!found || (command.hidden && message.author.id != config.ownerID)) {
-            return message.reply("That command does not exist!").then(msg => {
+            return message.reply("That command does not exist!");
+            /*.then(msg => {
                 msg.delete(5000)
-            });
+            });*/
         }
 
         let flds = [{
@@ -136,7 +137,7 @@ exports.run = (client, message, args) => {
         };
         flds.push(newField3);
 
-        return message.author.send({
+        return message.channel.send({
             embed: {
                 color: 4881584,
                 author: {
@@ -152,8 +153,8 @@ exports.run = (client, message, args) => {
                     text: "© 2018 AbsurdBrd Development"
                 }
             }
-        }).then(message.react("✅"))
-            .then(() => { if(message.channel.type == "text") message.delete(5000); });
+        }).then(message.react("✅"));
+        //    .then(() => { if(message.channel.type == "text") message.delete(5000); });
     }
 }
 

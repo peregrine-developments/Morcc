@@ -20,7 +20,7 @@ const charToBig = (ch) => {
             case "5":
                 return ":five:";
             case "6":
-                return "six";
+                return ":six:";
             case "7":
                 return ":seven:";
             case "8":
@@ -54,8 +54,7 @@ exports.run = (client, message, args) => {
     }
 
     message.channel.send("**" + message.member.displayName.replace(/\|/g, "\\|") + "** says (in big): " + msg);
-
-    message.delete();
+    return message.delete();
 }
 
 exports.info = {
@@ -67,6 +66,6 @@ exports.info = {
     aliases: ["big"],
     params: [["text", "Text to convert into big"]],
     hidden: false,
-    whitelist: ["all"],
+    whitelist: ["689277887181750279", "598539314376474634"],
     category: "Fun"
 }
