@@ -5,20 +5,20 @@ exports.run = (client, message, args) => {
 
     let newMessage = args.slice(1).join(" ");
 
-    // Actual conversion
-    newMessage = newMessage.replace(/[rl]/g, "w");
+    // Actual Conversion
+    newMessage = newMessage.replace(/l/g, "1").replace(/e/g, "3").replace(/a/g, "4").replace(/s/g, "5").replace(/b/g, "8").replace(/o/g, "0");
 
-    message.channel.send("**" + message.member.displayName.replace(/\|/g, "\\|") + "** says (in furryspeak): " + newMessage);
+    message.channel.send("**" + message.member.displayName.replace(/\|/g, "\\|") + "** says (in l33tspeak): " + newMessage);
     return message.delete();
 }
 
 exports.info = {
-    name: "Uwu",
-    command: "uwu",
-    desc: "Convert a message into furryspeak",
+    name: "L33t",
+    command: "l33t",
+    desc: "Convert a message into l33tspeak",
     desc_addi: "",
-    usage: config.prefix + "uwu {message}",
-    aliases: ["furry"],
+    usage: config.prefix + "l33t {message}",
+    aliases: ["l33tspeak"],
     params: [["message", "Message to convert"]],
     hidden: false,
     whitelist: ["689277887181750279", "598539314376474634"],
