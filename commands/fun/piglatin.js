@@ -18,7 +18,7 @@ exports.run = (client, message, args) => {
 
     // Actual conversion
     let returnMessage = [];
-    args.slice(1).forEach(word => {
+    args.forEach(word => {
         returnMessage.push(translatePigLatin(word));
     });
     newMessage = returnMessage.join(" ");

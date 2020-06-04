@@ -126,7 +126,7 @@ exports.run = (client, message, args) => {
             let first = true;
             command.whitelist.forEach(c => {
                 if (!first) channellist += "\n";
-                channellist += "#" + client.channels.get(c).name;
+                channellist += "#" + client.channels.cache.get(c).name;
                 first = false;
             });
         }
