@@ -3,7 +3,7 @@ const config = require("../../config/config.json");
 exports.run = (client, message, args) => {
     if (args.length < 1) return message.reply("You haven't specified a message to convert!");
 
-    let newMessage = args.slice(1).join(" ");
+    let newMessage = args.join(" ");
 
     // Actual conversion
     newMessage = newMessage.replace(/[rl]/g, "w");
