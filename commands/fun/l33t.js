@@ -21,6 +21,6 @@ exports.info = {
     aliases: ["l33tspeak"],
     params: [["message", "Message to convert"]],
     hidden: false,
-    whitelist: ["689277887181750279", "598539314376474634"],
+    whitelist: ["689277887181750279", "598539314376474634", "646538454712320035"],
     category: "Fun"
 }

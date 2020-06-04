@@ -138,13 +138,13 @@ client.on("message", message => {
         let found = false;
         if (client.commands.has(command)) {
             let funct = client.commands.get(command);
-            if (message.channel.type == "text" && !funct.info.whitelist.includes(message.channel.id) && !funct.info.whitelist.includes("all") && message.channel.id != "646538454712320035") return;
+            if (message.channel.type == "text" && !funct.info.whitelist.includes(message.channel.id) && !funct.info.whitelist.includes("all")) return;
             funct.run(client, message, args);
             found = true;
         } else {
             client.commands.forEach(com => {
                 if (com.info.aliases.includes(command) && !found) {
-                    if (message.channel.type == "text" && !com.info.whitelist.includes(message.channel.id) && !com.info.whitelist.includes("all") && message.channel.id != "646538454712320035") return;
+                    if (message.channel.type == "text" && !com.info.whitelist.includes(message.channel.id) && !com.info.whitelist.includes("all")) return;
                     com.run(client, message, args);
                     found = true;
                 }
