@@ -40,7 +40,7 @@ exports.run = (client, message, args) => {
                     icon_url: client.user.avatarURL
                 },
                 title: "Help",
-                description: "All CultBot commands\nUse " + config.prefix + "help {command} to get more specific info\n**PLEASE NOTE:** Some commands only work in specific channels!\nCommand-specific help info will include permitted channels!",
+                description: "All Morcc commands\nUse " + config.prefix + "help {command} to get more specific info\n**PLEASE NOTE:** Some commands only work in specific channels!\nCommand-specific help info will include permitted channels!",
                 fields: flds,
                 timestamp: new Date(),
                 footer: {
