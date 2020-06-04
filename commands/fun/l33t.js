@@ -6,7 +6,7 @@ exports.run = (client, message, args) => {
     let newMessage = args.join(" ");
 
     // Actual Conversion
-    newMessage = newMessage.replace(/l/g, "1").replace(/e/g, "3").replace(/a/g, "4").replace(/s/g, "5").replace(/b/g, "8").replace(/o/g, "0");
+    newMessage = newMessage.replace(/l/gi, "1").replace(/e/gi, "3").replace(/a/gi, "4").replace(/s/gi, "5").replace(/b/gi, "8").replace(/o/gi, "0");
 
     message.channel.send("**" + message.member.displayName.replace(/\|/g, "\\|") + "** says (in l33tspeak): " + newMessage);
     return message.delete();

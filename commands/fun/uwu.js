@@ -7,6 +7,7 @@ exports.run = (client, message, args) => {
 
     // Actual conversion
     newMessage = newMessage.replace(/[rl]/g, "w");
+    newMessage = newMessage.replace(/[RL]/g, "W");
 
     message.channel.send("**" + message.member.displayName.replace(/\|/g, "\\|") + "** says (in furryspeak): " + newMessage);
     return message.delete();
