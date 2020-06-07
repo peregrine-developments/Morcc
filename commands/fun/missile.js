@@ -14,7 +14,7 @@ exports.info = {
     command: "missile",
     desc: "THE MISSILE KNOWS WHERE IT IS AT ALL TI-",
     desc_addi: "",
-    usage: config.prefix + "missi;e",
+    usage: config.prefix + "missile",
     aliases: [],
     params: [],
     hidden: false,
