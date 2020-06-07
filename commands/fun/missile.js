@@ -14,9 +14,9 @@ exports.info = {
     command: "missile",
     desc: "THE MISSILE KNOWS WHERE IT IS AT ALL TI-",
     desc_addi: "",
-    usage: config.prefix + "missile",
+    usage: config.prefix + "missile {designator} (optional)",
     aliases: [],
-    params: [],
+    params: [["designator", "Optional designator for customization"]],
     hidden: false,
     whitelist: ["all"],
     category: "Fun"
